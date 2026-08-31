@@ -22,4 +22,12 @@ along with this software (see the LICENSE.md file). If not, see
             authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_VIEW"/>
     <moqui.security.ArtifactAuthz artifactAuthzId="MOQUI_API_ADMIN" artifactGroupId="MOQUI_API" userGroupId="ADMIN"
             authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_VIEW"/>
+    <!-- JSON-RPC EntitySync put/get and SystemMessage receive are not under Tools/System inherit -->
+    <moqui.security.ArtifactAuthz artifactAuthzId="EntitySyncServicesADMIN" userGroupId="ADMIN" artifactGroupId="EntitySyncServices"
+            authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_VIEW"/>
+    <moqui.security.ArtifactAuthz artifactAuthzId="SystemMessageServicesADMIN" userGroupId="ADMIN" artifactGroupId="SystemMessageServices"
+            authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_VIEW"/>
+    <!-- OpenSearch/Kibana proxy servlets use UserPermission, not artifact inherit -->
+    <moqui.security.UserGroupPermission userGroupId="ADMIN" userPermissionId="ElasticRemote" fromDate="0" thruDate="1265184000000"/>
+    <moqui.security.UserGroupPermission userGroupId="ADMIN" userPermissionId="KibanaRemote" fromDate="0" thruDate="1265184000000"/>
 </entity-facade-xml>

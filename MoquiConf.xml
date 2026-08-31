@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- No copyright or license for configuration file, details here are not considered a creative work. -->
 <moqui-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/moqui-conf-3.xsd">
+    <webapp-list>
+        <webapp name="webroot">
+            <endpoint path="/groovysh" enabled="false"/>
+        </webapp>
+    </webapp-list>
     <screen-facade>
         <screen location="component://tools/screen/System/Resource.xml">
             <subscreens-item name="ElFinder" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
@@ -12,22 +17,16 @@
 
         <screen location="component://tools/screen/Tools/Entity.xml">
             <subscreens-item name="DataImport" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
-        </screen>
-        <screen location="component://tools/screen/Tools/Entity.xml">
+            <subscreens-item name="DataExport" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
             <subscreens-item name="DataSnapshot" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
-        </screen>
-        <screen location="component://tools/screen/Tools/Entity.xml">
             <subscreens-item name="SpeedTest" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
-        </screen>
-        <screen location="component://tools/screen/Tools/Entity.xml">
             <subscreens-item name="SqlRunner" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
-        </screen>
-        <screen location="component://tools/screen/Tools/Entity.xml">
             <subscreens-item name="SqlScriptRunner" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
         </screen>
 
         <screen location="component://tools/screen/Tools/Service.xml">
             <subscreens-item name="ServiceLoadRunner" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
+            <subscreens-item name="ServiceRun" menu-include="false" location="component://moqui-demo/screen/Disabled.xml"/>
         </screen>
     </screen-facade>
 </moqui-conf>
